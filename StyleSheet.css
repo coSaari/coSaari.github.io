@@ -1,0 +1,30 @@
+body {background-color: white;}
+
+#the_grass{color:green}
+
+.orange {color:orange; font-weight: bold}
+
+.lefttiger {
+        transform: rotate(70deg);}
+
+
+#header {
+        background-image: url('https://i.pinimg.com/originals/4c/ba/b9/4cbab97eaf40a31982176951814d0c11.gif');
+        height: 100px;
+        }
+
+#footer {
+        clear: left;
+        height: 100px;
+        width: 100%;
+        background-image: url('https://media1.tenor.com/images/2a3bcbcbe4e14c1cf24ef307c10c1fb9/tenor.gif?itemid=6112271');
+        text-align: center;
+        padding: 4px 0;
+        }
+main {
+    /*background-image: url('https://media2.giphy.com/media/1Ygkk70ho1h6YrK6oC/giphy.gif');*/
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: left;
+    width: 100%;
+        }
