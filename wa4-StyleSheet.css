@@ -48,7 +48,7 @@ nav ul a {
     padding-bottom: 10010px;
     margin-bottom: -10000px;
     float: left;
-    width: 500px;
+    width: 150px;
     margin-left: -100%;
     background: #eee;
 }
@@ -66,7 +66,7 @@ nav ul a {
 }
             
 #content {
-    margin-left: 500px; /* Same as 'nav' width */
+    margin-left: 150px; /* Same as 'nav' width */
 }
 
 
