@@ -1,4 +1,4 @@
-
+/*Element Selectors*/
 body {
     margin:0;
     padding:0;
@@ -6,6 +6,33 @@ body {
     line-height: 1.5em;
 }
 
+main {
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: left;
+    width: 100%;
+}
+
+p {
+    color: rgb(39, 39, 39);
+    margin-right: 230px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+
+
+
+/*ID Selectors*/
 #header {
     background-image: url('https://cosaari.github.io/blueCrystal.gif');
     /*background: #ccc;*/
@@ -15,13 +42,6 @@ body {
 #header h1 {
     margin: 0;
     padding-top: 15px;
-}
-
-main {
-    padding-bottom: 10010px;
-    margin-bottom: -10000px;
-    float: left;
-    width: 100%;
 }
 
 #nav {
@@ -49,23 +69,10 @@ main {
     margin-left: 150px; /* Same as 'nav' width */
 }
 
+
+
+/*Class Selectors*/
 .innertube {
     margin: 15px; /* Padding for content */
     margin-top: 0;
-}
-
-p {
-    color: rgb(39, 39, 39);
-    margin-right: 230px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul a {
-    color: blueviolet;
-    text-decoration: none;
 }
