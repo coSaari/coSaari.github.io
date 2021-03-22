@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WA8</title>
+    <link rel='stylesheet' href='https://cosaari.github.io/bb-StyleSheet.css'>
+
+
+
+    <style>
+        .error {
+            color: red;
+        }
+      </style>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+
+
+<body>
+
+    <header id='header'>
+        <div class="innertube">
+            <h1 style="color:white;">Weekly Assignment 8</h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="content">
+            <div class="innertube">
+                <center><img src="https://cosaari.github.io/LakePic.jpg" alt="Poster"></center>
+                <h1>WA8</h1>
+                <h2><i>Step 1</i></h2>
+                    <p>
+                    &emsp;&emsp;For filtering the data I wanted to look at a specific portion of the stops within 
+                    each month to see if there was any general trends. I figured that, as with many careers, 
+                    quotas need to be met by the end of the month for specific performance purposes. To counteract 
+                    this, I filtered the data by the total number of stops performed within the first week of each month.
+
+                    &emsp;&emsp;The aggregation portion consisted of summing the corresponding rows associated with the stops
+                    in the first week of the month at certain fundamental features. I primarily wanted to look at the total number
+                    of minutes all the stops took within the first week, as well as the differing number of male to female offenders.
+                    Comparing the sum of the total number of minutes and total number of male vs. female offenders in the first week of each
+                    month shows the trend of what month has the most impact on the city.
+
+                    <a href="https://github.com/coSaari/cosaari.github.io/blob/master/WA7.ipynb" target="_blank">Notebook</a>
+                    </p>
+                <br>
+                <br>
+
+                <h2><i>Step 2</i></h2>
+                <p>
+                &emsp;&emsp;The first visualization depicts the total number of minutes aggregated within
+                the first week of each month.
+                <br>
+                &emsp;&emsp;The second visualization is comparing the total number of females and males stopped 
+                within the first week of each month.
+                </p>
+                <br>
+                <center><div id="vis">
+                    <script>
+                      (function(vegaEmbed) {
+                        var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-0f87c62640e0360276517d3950a35f4c"}, "mark": {"type": "bar", "color": "red", "size": 10}, "encoding": {"color": {"type": "quantitative", "field": "index", "scale": {"scheme": "goldgreen"}}, "tooltip": [{"type": "quantitative", "field": "totF"}, {"type": "quantitative", "field": "totM"}], "x": {"type": "quantitative", "field": "index", "title": "Month"}, "y": {"type": "quantitative", "field": "totMins", "title": "Time (min)"}}, "height": 300, "title": {"text": ["Total Number of Minutes Stopped per Month"]}, "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-0f87c62640e0360276517d3950a35f4c": [{"index": 1, "totMins": 1185.0, "totF": 32, "totM": 77}, {"index": 2, "totMins": 1933.0, "totF": 67, "totM": 114}, {"index": 3, "totMins": 2311.0, "totF": 65, "totM": 136}, {"index": 4, "totMins": 2597.0, "totF": 70, "totM": 138}, {"index": 5, "totMins": 1426.0, "totF": 39, "totM": 82}, {"index": 6, "totMins": 1598.0, "totF": 44, "totM": 121}, {"index": 7, "totMins": 1945.0, "totF": 51, "totM": 110}, {"index": 8, "totMins": 3014.0, "totF": 64, "totM": 131}, {"index": 9, "totMins": 1847.0, "totF": 53, "totM": 117}, {"index": 10, "totMins": 1428.0, "totF": 47, "totM": 82}, {"index": 11, "totMins": 1088.0, "totF": 24, "totM": 73}, {"index": 12, "totMins": 1158.0, "totF": 51, "totM": 57}]}};
+                        var embedOpt = {"mode": "vega-lite"};
+                  
+                        function showError(el, error){
+                            el.innerHTML = ('<div class="error" style="color:red;">'
+                                            + '<p>JavaScript Error: ' + error.message + '</p>'
+                                            + "<p>This usually means there's a typo in your chart specification. "
+                                            + "See the javascript console for the full traceback.</p>"
+                                            + '</div>');
+                            throw error;
+                        }
+                        const el = document.getElementById('vis');
+                        vegaEmbed("#vis", spec, embedOpt)
+                          .catch(error => showError(el, error));
+                      })(vegaEmbed);
+                  
+                    </script></div></center>
+
+                <center><div id="vis1">
+                    <script>
+                        (function(vegaEmbed) {
+                        var spec1 = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"mark": {"type": "bar", "color": "pink", "size": 10}, "encoding": {"x": {"type": "quantitative", "field": "index", "title": "Month"}, "y": {"type": "quantitative", "field": "totF", "scale": {"domain": [0, 150]}, "title": "Number of Females"}}, "height": 300, "title": {"text": ["Total Number of Females Stopped"]}, "width": 300}, {"mark": {"type": "bar", "color": "blue", "size": 10}, "encoding": {"x": {"type": "quantitative", "field": "index", "title": "Month"}, "y": {"type": "quantitative", "field": "totM", "scale": {"domain": [0, 150]}, "title": "Number of Males"}}, "height": 300, "title": {"text": ["Total Number of Males Stopped"]}, "width": 300}], "data": {"name": "data-0f87c62640e0360276517d3950a35f4c"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-0f87c62640e0360276517d3950a35f4c": [{"index": 1, "totMins": 1185.0, "totF": 32, "totM": 77}, {"index": 2, "totMins": 1933.0, "totF": 67, "totM": 114}, {"index": 3, "totMins": 2311.0, "totF": 65, "totM": 136}, {"index": 4, "totMins": 2597.0, "totF": 70, "totM": 138}, {"index": 5, "totMins": 1426.0, "totF": 39, "totM": 82}, {"index": 6, "totMins": 1598.0, "totF": 44, "totM": 121}, {"index": 7, "totMins": 1945.0, "totF": 51, "totM": 110}, {"index": 8, "totMins": 3014.0, "totF": 64, "totM": 131}, {"index": 9, "totMins": 1847.0, "totF": 53, "totM": 117}, {"index": 10, "totMins": 1428.0, "totF": 47, "totM": 82}, {"index": 11, "totMins": 1088.0, "totF": 24, "totM": 73}, {"index": 12, "totMins": 1158.0, "totF": 51, "totM": 57}]}};
+                        var embedOpt1 = {"mode": "vega-lite"};
+                    
+                        function showError(el, error){
+                            el.innerHTML = ('<div class="error" style="color:red;">'
+                                            + '<p>JavaScript Error: ' + error.message + '</p>'
+                                            + "<p>This usually means there's a typo in your chart specification. "
+                                            + "See the javascript console for the full traceback.</p>"
+                                            + '</div>');
+                            throw error;
+                        }
+                        const el = document.getElementById('vis');
+                        vegaEmbed("#vis1", spec1, embedOpt1)
+                            .catch(error => showError(el, error));
+                        })(vegaEmbed);
+                    
+                    </script></div></center>
+
+
+                <br>
+                <h2><i>Step 3</i></h2>
+                <p>
+                &emsp;&emsp;Overall, when looking at the first week of each month, there are some clear trends 
+                as to when stops are being conducted. In both the visualizations showing total minutes 
+                per month, and the comparison between males and female offenders, there are clear increases in 
+                April and August. One speculative insight is that these months corresponded to fundamental dates 
+                in the academic calendar. After some research, CU Boulder has several important dates in these months,
+                the first being the last day of Spring classes on April 29th, and the second being the beginning of Fall classes
+                on August 24th. Both in the total number of females and males can this trend be seen, which directly correlates 
+                to the increases in the total number of minutes in those months. One particularly interesting finding that 
+                stuck out was the vastly greater number of males that were stopped each month over the entire year. 
+                This can either relate to the general populational porpotion of males and females that attend CU Boulder,
+                or this can relate to inherent biases within law enforcement to stop male offenders more often. One future question
+                that would be able to better understand this question is to see what percentage of males were charged, and 
+                what percentage of females were charged, given that they were stopped for greater than 5 minutes. This would
+                give a better picture of how many of these stops were actualized into an offense.
+                </p>
+                <br>
+                <br>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <nav id='nav'>
+        <div id="links">
+            <div class='innertube'>
+                <h3>Main Links</h3>
+                <ul>
+                    <li><a href="https://github.com/coSaari/cosaari.github.io/blob/master/WA7.ipynb" target="_blank">Notebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <footer id='footer'>
+        <h1 style="color:white;">Thank For Visiting!</h1>
+    </footer>
+    
+
+</body>  
+
+</html>
