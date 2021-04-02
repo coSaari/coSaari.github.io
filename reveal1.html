@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/simple.min.css" id="theme">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
 
 		<!-- Theme used for syntax highlighted code -->
@@ -17,34 +17,69 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-transition="slide-in fade-out">
-					<h1 class="fragment fade-up">Big header</h1>
-					<p style="font-weight:bold;" class="fragment fade-up">Custom text styles</p>
-					<img src="https://media.giphy.com/media/JtrHPBNTg7KM0/giphy.gif">
+				<section data-transition="slide-in fade-out" data-background-color="aquamarine">
+					<h1 class="fragment fade-up">Reveal.js</h1>
+					<p style="font-weight:bold;" class="fragment fade-up">Feature Description</p>
+					<img src="https://media.giphy.com/media/3o85xkjtCbB7GiAwak/giphy.gif">
 				</section>
 				
 
-				<section data-transition="slide-in fade-out">
-					Show your INFO 3402 experience in 3 emojis!
-                    <span></span>
+				<section data-transition="slide-in fade-out" data-background-color="purple">
+					<h2 class="fragment fade-up">Cool Layout Features</h2>
+					<p style="font-weight:bold;" class="fragment fade-up">Stacking</p>
 				</section>
 
-				<section data-transition="slide-in fade-out">
-					Show your INFO 3402 experience in a GIF!
+				
+				<section data-transition="slide-in fade-out" data-background-color="red">
+					<h2 class="fragment fade-up">Ladies and Gentlemen: Jim Carrey!</h2>
+					<div class="r-stack">
+						<img class="fragment" src="https://media.giphy.com/media/641arBi22PAty/giphy.gif" width="650" height="500">
+						<img class="fragment" src="https://www.inspiredtraveler.ca/wp-content/uploads/2021/02/jim-carrey-ace-ventura-3.jpg" width="400" height="450">
+						<img class="fragment" src="https://media.giphy.com/media/8OlT82jKm6Ugg/giphy.gif" width="350" height="350">
+						<img class="fragment" src="https://www.denofgeek.com/wp-content/uploads/2018/12/a-series-of-unfortunate-events-jim-carrey-1108x0-c-default_0.jpg?fit=1108%2C831" width="450" height="300">
+						<img class="fragment" src="https://media.giphy.com/media/pVAMI8QYM42n6/giphy.gif" width="350" height="350">
+						<img class="fragment" src="https://img.buzzfeed.com/buzzfeed-static/static/2020-07/16/20/asset/c3104153e04f/sub-buzz-2491-1594932166-29.jpg?crop=979%3A720%3B150%2C0&resize=475%3A%2A" width="450" height="350">
+					</div>
 				</section>
+				
 
                 <section data-transition="slide-in fade-out">
-					<h2 class="fragment fade-up">Code Block</h2>
-                    <pre><code data-trim data-noescape>
-                        print("Number of Episodes per Season")
-                        print("S1:\t"+str(len(season1Votes)))
-                        print("S2:\t"+str(len(season2Votes)))
-                        print("S3:\t"+str(len(season3Votes)))
-                        print("S4:\t"+str(len(season4Votes)))
-                        print("S5:\t"+str(len(season5Votes)))
-                    </code></pre>
+					<h2 class="fragment fade-up">How to Stack</h2>
+					<p style="font-weight:bold;" class="fragment fade-up">Use class "r-stack" in conjunction with the "fragment" class to stack elements like images.</p>
+                    <pre><code><script type = "text/template">
+<div class="r-stack">
+   <img class="fragment" src="http://.com" width="450" height="300">
+   <img class="fragment" src="http://.com" width="300" height="450">
+   <img class="fragment" src="http://.com" width="400" height="400">
+</div>
+                    </script></code></pre>
 				</section>
 
+				<section data-transition="slide-in fade-out" data-background-color="purple">
+					<h2 class="fragment fade-up">Framing</h2>
+					<p style="font-weight:bold;" class="fragment fade-up">Framing is an easy layout feature to make images or logos pop on the page, or link to other sites.</p>
+						<img src="https://media.giphy.com/media/aCB9UFwAw7Nio/giphy.gif" width="200" height="200">
+						<a href="https://giphy.com/gifs/dancing-jim-carrey-ace-ventura-pet-detective-aCB9UFwAw7Nio">
+						<img class="r-frame" src="https://media.giphy.com/media/aCB9UFwAw7Nio/giphy.gif" width="200" height="200">
+						</a>
+				</section>
+
+				<section data-transition="slide-in fade-out">
+					<h2 class="fragment fade-up">How to Frame</h2>
+					<p style="font-weight:bold;" class="fragment fade-up">By using the class "r-frame" in any element, within an anchor, you will be able to utilize this cool feature.</p>
+                    <pre><code><script type = "text/template">
+<img src="logo.svg" width="200">
+<a href="#">
+	<img class="r-frame" src="logo.svg" width="200">
+</a>
+                    </script></code></pre>
+				</section>
+
+				<section data-transition="slide-in fade-out" data-background-color="aquamarine">
+					<h2 class="fragment fade-up">Feature Sources</h2>
+					<p style="font-weight:bold;" class="fragment fade-up">Both the stacking and framing classes can be found <a href="https://revealjs.com/layout/">here.</a> For 
+					a link to the Reveal.js home page click <a href="https://revealjs.com/">here.</a> For the CDN library used to import some of the features click <a href="https://cdnjs.com/libraries/reveal.js">here.</a></p>
+				</section>
 
 			</div>
 		</div>
