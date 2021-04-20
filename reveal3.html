@@ -123,8 +123,7 @@ x.configure_title(fontSize=50).configure(background='#33FFE8')
 
 				<section data-transition="slide-in fade-out">
 					<h4 style="font-weight:bold;" class="fragment fade-up">Visualization 2 Code</h4>
-                    <p class="fragment fade-up">This second visualization depicts 
-                        the relationship between MPG and Horsepower at the country of origin.
+                    <p class="fragment fade-up">This second visualization utilizes a dropdown menu and selection to change the opacity of particular columns.
                     </p>
                 </p><pre><code><script type = "text/template">dropdown = alt.binding_select(options=df['Origin'].unique(), 
 name='Select a region: ')
